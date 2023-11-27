@@ -16,16 +16,15 @@ class CategoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        if(category!=null){
-          context.read<NavbarCubit>().controller.animateToPage(
-              0,
+        if (category != null) {
+          context.read<NavbarCubit>().controller.animateToPage(0,
               duration: const Duration(milliseconds: 400),
               curve: Curves.linear);
           context.read<NavbarCubit>().update(0);
-          context.read<FilterCubit>().update(
-            category: category
-          );
-          context.read<ProductBloc>().add(GetProducts(context.read<FilterCubit>().state));
+          context.read<FilterCubit>().update(category: category);
+          context
+              .read<ProductBloc>()
+              .add(GetProducts(context.read<FilterCubit>().state));
         }
       },
       child: category != null
@@ -60,16 +59,16 @@ class CategoryCard extends StatelessWidget {
                     right: 10,
                     bottom: 25,
                     child: Container(
-                      padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 10),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 6, horizontal: 10),
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: Color(0xFF3a086b),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Text(
                         category!.name,
-                        style: const TextStyle(
-                          fontSize: 18,
-                        ),
+                        style:
+                            const TextStyle(fontSize: 18, color: Colors.white),
                       ),
                     ))
               ],

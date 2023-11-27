@@ -34,11 +34,19 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        foregroundColor: Colors.black,
-        backgroundColor: Colors.white,
+        foregroundColor: Color(0xFF3a086b),
+        backgroundColor: Colors.transparent,
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.message)),
-          IconButton(onPressed: () {}, icon: const Icon(Icons.share)),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.message),
+            color: Color(0xFF3a086b),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.share),
+            color: Color(0xFF3a086b),
+          ),
         ],
       ),
       body: ListView(
@@ -101,9 +109,9 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                 activeIndex: _currentIndex,
                 count: widget.product.images.length,
                 effect: ScrollingDotsEffect(
-                    dotColor: Colors.grey.shade300,
+                    dotColor: Color(0xFF3a086b),
                     maxVisibleDots: 7,
-                    activeDotColor: Colors.grey,
+                    activeDotColor: Color(0xFFf59cde),
                     dotHeight: 6,
                     dotWidth: 6,
                     activeDotScale: 1.1,
@@ -116,7 +124,10 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                 const EdgeInsets.only(left: 20, right: 14, top: 20, bottom: 4),
             child: Text(
               widget.product.name,
-              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
+              style: const TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w500,
+                  color: Color(0xFF3a086b)),
             ),
           ),
           Padding(
@@ -138,7 +149,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
                               width: _selectedPriceTag.id == priceTag.id
                                   ? 2.0
                                   : 1.0,
-                              color: Colors.grey,
+                              color: Color(0xFFf59cde),
                             ),
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(5.0)),
@@ -170,7 +181,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
         ],
       ),
       bottomNavigationBar: Container(
-        color: Theme.of(context).colorScheme.secondary,
+        color: Color(0xFF3a086b),
         height: 80 + MediaQuery.of(context).padding.bottom,
         padding: EdgeInsets.only(
           bottom: MediaQuery.of(context).padding.bottom + 10,
@@ -203,6 +214,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
             SizedBox(
               width: 120,
               child: InputFormButton(
+                color: Color(0xFFf59cde),
                 onClick: () {
                   context.read<CartBloc>().add(AddProduct(
                       cartItem: CartItem(
@@ -220,6 +232,7 @@ class _ProductDetailsViewState extends State<ProductDetailsView> {
             SizedBox(
               width: 90,
               child: InputFormButton(
+                color: Color(0xFFf59cde),
                 onClick: () {
                   Navigator.of(context)
                       .pushNamed(AppRouter.orderCheckout, arguments: [

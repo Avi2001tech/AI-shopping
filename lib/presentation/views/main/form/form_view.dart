@@ -70,7 +70,7 @@ class _FormViewState extends State<FormView> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            backgroundColor: Color.fromARGB(255, 133, 57, 210),
+            backgroundColor: Color(0xFF3a086b),
             title: Text(
               "Details Form",
               style: TextStyle(
@@ -134,7 +134,7 @@ class _FormViewState extends State<FormView> {
                 },
                 icon: const Icon(
                   Icons.arrow_drop_down_circle,
-                  color: Colors.deepPurple,
+                  color: Color(0xFF3a086b),
                 ),
                 dropdownColor: Colors.white,
                 decoration: InputDecoration(
@@ -161,14 +161,14 @@ class _FormViewState extends State<FormView> {
                 },
                 icon: const Icon(
                   Icons.arrow_drop_down_circle,
-                  color: Colors.deepPurple,
+                  color: Color(0xFF3a086b),
                 ),
                 dropdownColor: Colors.white,
                 decoration: InputDecoration(
                     labelText: "Body Shape",
                     prefixIcon: Icon(
                       Icons.accessibility_new_rounded,
-                      color: Colors.deepPurple,
+                      color: Color(0xFF3a086b),
                     ),
                     border: UnderlineInputBorder()),
               ),
@@ -188,14 +188,14 @@ class _FormViewState extends State<FormView> {
                 },
                 icon: const Icon(
                   Icons.arrow_drop_down_circle,
-                  color: Colors.deepPurple,
+                  color: Color(0xFF3a086b),
                 ),
                 dropdownColor: Colors.white,
                 decoration: InputDecoration(
                     labelText: "Waist Size",
                     prefixIcon: Icon(
                       Icons.accessibility_new_rounded,
-                      color: Colors.deepPurple,
+                      color: Color(0xFF3a086b),
                     ),
                     border: UnderlineInputBorder()),
               ),

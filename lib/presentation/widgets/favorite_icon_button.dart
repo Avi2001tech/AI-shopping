@@ -11,7 +11,7 @@ class FavoriteIconButton extends StatelessWidget {
         onPressed: () {},
         style: ElevatedButton.styleFrom(
           foregroundColor: Colors.white,
-          backgroundColor: Colors.black87,
+          backgroundColor: Color(0xFF3a086b),
           shape: const CircleBorder(),
           elevation: 0,
           padding: const EdgeInsets.all(4),
