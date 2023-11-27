@@ -50,7 +50,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       },
       child: Scaffold(
           body: SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         child: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -63,17 +63,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     height: 50,
                   ),
                   SizedBox(
-                      height: 80,
+                      height: 180,
                       child: Image.asset(
                         kAppLogo,
-                        color: Colors.black,
                       )),
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  // const SizedBox(
+                  //   height: 10,
+                  // ),
                   const Text(
-                    "Please use your e-mail address to crate a new account",
-                    style: TextStyle(fontSize: 16, color: Colors.grey),
+                    "Please use your e-mail address to create a new account",
+                    style: TextStyle(fontSize: 16, color: Color(0xFFf59cde)),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(
@@ -153,11 +152,11 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             confirmPasswordController.text) {
                         } else {
                           context.read<UserBloc>().add(SignUpUser(SignUpParams(
-                            firstName: firstNameController.text,
-                            lastName: lastNameController.text,
-                            email: emailController.text,
-                            password: passwordController.text,
-                          )));
+                                firstName: firstNameController.text,
+                                lastName: lastNameController.text,
+                                email: emailController.text,
+                                password: passwordController.text,
+                              )));
                         }
                       }
                     },
@@ -166,7 +165,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     height: 40,
                   ),
                   InputFormButton(
-                    color: Colors.black87,
+                    color: Color(0xFF3a086b),
                     onClick: () {
                       if (_formKey.currentState!.validate()) {
                         if (passwordController.text !=
@@ -187,7 +186,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     height: 10,
                   ),
                   InputFormButton(
-                    color: Colors.black87,
+                    color: Color(0xFF3a086b),
                     onClick: () {
                       Navigator.of(context).pop();
                     },

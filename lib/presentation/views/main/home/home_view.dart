@@ -30,9 +30,7 @@ class _HomeViewState extends State<HomeView> {
     double scrollPercentage = 0.7;
     if (currentScroll > (maxScroll * scrollPercentage)) {
       if (context.read<ProductBloc>().state is ProductLoaded) {
-        context
-            .read<ProductBloc>()
-            .add(const GetMoreProducts());
+        context.read<ProductBloc>().add(const GetMoreProducts());
       }
     }
   }
@@ -65,7 +63,10 @@ class _HomeViewState extends State<HomeView> {
                       },
                       child: Text(
                         "${state.user.firstName} ${state.user.lastName}",
-                        style: const TextStyle(fontSize: 26),
+                        style: const TextStyle(
+                          fontSize: 26,
+                          color: Color(0xFF3a086b),
+                        ),
                       ),
                     ),
                     const Spacer(),
@@ -105,14 +106,16 @@ class _HomeViewState extends State<HomeView> {
                           height: 8,
                         ),
                         Text(
-                          "Welcome,",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 36),
-                        ),
-                        Text(
-                          "E-Shop mobile store",
+                          "Welcome to,",
                           style: TextStyle(
                               fontWeight: FontWeight.normal, fontSize: 22),
+                        ),
+                        Text(
+                          "AI Fashion",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 30,
+                              color: Color(0xFF3a086b)),
                         ),
                       ],
                     ),
@@ -181,6 +184,7 @@ class _HomeViewState extends State<HomeView> {
                                 : null,
                             border: const OutlineInputBorder(),
                             hintText: "Search Product",
+                            iconColor: Color(0xFFf59cde),
                             fillColor: Colors.grey.shade100,
                             filled: true,
                             focusedBorder: OutlineInputBorder(
@@ -216,7 +220,7 @@ class _HomeViewState extends State<HomeView> {
                             context.read<FilterCubit>().getFiltersCount() != 0,
                         backgroundColor: Theme.of(context).primaryColor,
                         child: InputFormButton(
-                          color: Colors.black87,
+                          color: Color(0xFF3a086b),
                           onClick: () {
                             Navigator.of(context).pushNamed(AppRouter.filter);
                           },
@@ -274,7 +278,8 @@ class _HomeViewState extends State<HomeView> {
                                           .searchController
                                           .text)));
                             },
-                            icon: const Icon(Icons.refresh)),
+                            icon: const Icon(Icons.refresh,
+                                color: Color(0xFF3a086b))),
                         SizedBox(
                           height: MediaQuery.of(context).size.height * 0.1,
                         )

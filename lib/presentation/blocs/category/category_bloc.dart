@@ -64,9 +64,6 @@ class CategoryBloc extends Bloc<CategoryEvent, CategoryState> {
   void _onFilterCategories(
       FilterCategories event, Emitter<CategoryState> emit) async {
     try {
-      ///Initial Category loading with minimal loading animation
-      ///
-      ///Cashed category
       emit(CategoryLoading(categories: state.categories));
       final cashedResult = await _filterCategoryUseCase(event.keyword);
       cashedResult.fold(

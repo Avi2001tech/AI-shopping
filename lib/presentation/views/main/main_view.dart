@@ -5,6 +5,7 @@ import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
 import '../../blocs/home/navbar_cubit.dart';
 import 'cart/cart_view.dart';
 import 'category/category_view.dart';
+import 'form/form_view.dart';
 import 'home/home_view.dart';
 import 'other/other_view.dart';
 
@@ -33,6 +34,7 @@ class _MainViewState extends State<MainView> {
                     CategoryView(),
                     CartView(),
                     OtherView(),
+                    FormView(),
                   ],
                 ),
               );
@@ -52,7 +54,7 @@ class _MainViewState extends State<MainView> {
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(48)),
                     ),
-                    backgroundColor: Colors.black87,
+                    backgroundColor: Color(0xFF3a086b),
                     snakeViewColor: Colors.black87,
                     height: 68,
                     elevation: 4,
@@ -86,7 +88,7 @@ class _MainViewState extends State<MainView> {
                           activeIcon: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: CircleAvatar(
-                              backgroundColor: Colors.deepOrange,
+                              backgroundColor: Color(0xFFf286d5),
                               maxRadius: 4,
                             ),
                           ),
@@ -100,7 +102,7 @@ class _MainViewState extends State<MainView> {
                           activeIcon: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: CircleAvatar(
-                              backgroundColor: Colors.deepOrange,
+                              backgroundColor: Color(0xFFf286d5),
                               maxRadius: 4,
                             ),
                           ),
@@ -114,7 +116,7 @@ class _MainViewState extends State<MainView> {
                           activeIcon: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: CircleAvatar(
-                              backgroundColor: Colors.deepOrange,
+                              backgroundColor: Color(0xFFf286d5),
                               maxRadius: 4,
                             ),
                           ),
@@ -128,11 +130,26 @@ class _MainViewState extends State<MainView> {
                           activeIcon: Padding(
                             padding: EdgeInsets.all(5.0),
                             child: CircleAvatar(
-                              backgroundColor: Colors.deepOrange,
+                              backgroundColor: Color(0xFFf286d5),
                               maxRadius: 4,
                             ),
                           ),
                           label: 'Other'),
+                      BottomNavigationBarItem(
+                          icon: ImageIcon(
+                            AssetImage("assets/navbar_icons/contact-form.png"),
+                            color: Colors.white,
+                            size: 26,
+                          ),
+                          activeIcon: Padding(
+                            padding: EdgeInsets.all(5.0),
+                            child: CircleAvatar(
+                              backgroundColor: Color(0xFFf286d5),
+                              maxRadius: 4,
+                            ),
+                          ),
+                          label: 'Form'),
+                      // BottomNavigationBarItem(icon: Icon(Icons.search), label: 'search')
                       // BottomNavigationBarItem(icon: Icon(Icons.search), label: 'search')
                     ],
                   );

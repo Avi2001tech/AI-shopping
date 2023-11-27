@@ -64,17 +64,16 @@ class _SignInViewState extends State<SignInView> {
                     height: 50,
                   ),
                   SizedBox(
-                      height: 80,
+                      height: 180,
                       child: Image.asset(
                         kAppLogo,
-                        color: Colors.black,
                       )),
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  // const SizedBox(
+                  //   height: 20,
+                  // ),
                   const Text(
                     "Please enter your e-mail address and password to sign-in",
-                    style: TextStyle(fontSize: 16, color: Colors.black54),
+                    style: TextStyle(fontSize: 16, color: Color(0xFFf59cde)),
                     textAlign: TextAlign.center,
                   ),
                   const Spacer(
@@ -130,6 +129,7 @@ class _SignInViewState extends State<SignInView> {
                         'Forgot Password?',
                         style: TextStyle(
                           fontSize: 14,
+                          color: Color(0xFFf59cde),
                         ),
                       ),
                     ),
@@ -138,7 +138,7 @@ class _SignInViewState extends State<SignInView> {
                     height: 24,
                   ),
                   InputFormButton(
-                    color: Colors.black87,
+                    color: Color(0xFF3a086b),
                     onClick: () {
                       if (_formKey.currentState!.validate()) {
                         context.read<UserBloc>().add(SignInUser(SignInParams(
@@ -153,7 +153,7 @@ class _SignInViewState extends State<SignInView> {
                     height: 10,
                   ),
                   InputFormButton(
-                    color: Colors.black87,
+                    color: Color(0xFF3a086b),
                     onClick: () {
                       Navigator.of(context).pop();
                     },
@@ -179,7 +179,7 @@ class _SignInViewState extends State<SignInView> {
                             'Register',
                             style: TextStyle(
                               fontSize: 14,
-                              color: Colors.black,
+                              color: Color(0xFFf59cde),
                               fontWeight: FontWeight.w600,
                             ),
                           ),

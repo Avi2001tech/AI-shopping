@@ -123,7 +123,7 @@ class ProductCard extends StatelessWidget {
                           ),
                         )
                       : Text(
-                          r'$' + product!.priceTags.first.price.toString(),
+                          r'Rs ' + product!.priceTags.first.price.toString(),
                           style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w600,
