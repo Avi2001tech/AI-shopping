@@ -33,7 +33,7 @@ class _FormViewState extends State<FormView> {
   final _SkinTone = ["dark", "brown", "fair", "white", "milky"];
   String? _selectedVal1;
 
-  final _WaistSize = ["32cm", "34cm", "36cm", "38cm", "40cm"];
+  final _WaistSize = ["32 inch", "34 inch", "36 inch", "38 inch", "40 inch"];
   String? _selectedVal2;
 
   final _BodyShape = ["skinny", "chubby", "slimtfit", "muscular", "Obesed"];

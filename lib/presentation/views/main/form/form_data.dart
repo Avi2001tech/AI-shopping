@@ -19,6 +19,6 @@ class FormData {
   });
 
   String toParagraph() {
-    return "Suggest me some dress for $occasion, I am a ${gender?.name ?? 'Gender'} with a body height of $bodyHeight. I have a $skinTone skin and a $bodyShape body with a waist of $waistSize. Please suggest me accordingly in 2-3 lines.";
+    return "${gender?.name ?? 'Gender'} $occasion dress recommendations for someone with a body height of $bodyHeight cm, $skinTone skin and a $bodyShape body with a waist of $waistSize.Please give in 2-3 lines";
   }
 }
